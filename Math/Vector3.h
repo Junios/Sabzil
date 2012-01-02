@@ -1,22 +1,7 @@
-#ifndef __VECTOR3_H__
+﻿#ifndef __VECTOR3_H__
 #define __VECTOR3_H__
 
-
-//#ifndef D3DMATRIX_DEFINED
-//typedef struct _D3DMATRIX {
-//	union {
-//		struct {
-//			float        _11, _12, _13, _14;
-//			float        _21, _22, _23, _24;
-//			float        _31, _32, _33, _34;
-//			float        _41, _42, _43, _44;
-//
-//		};
-//		float m[4][4];
-//	};
-//} D3DMATRIX;
-
-namespace Junios
+namespace Sabzil
 {
 	class Vector3
 	{
@@ -76,8 +61,7 @@ namespace Junios
 		friend float Dot(const Vector3&, const Vector3&);
 		friend Vector3 Cross(const Vector3&, const Vector3&);
 		friend float Distance(const Vector3&, const Vector3&);
-
 	};
-};
+}
 
 #endif //__VECTOR3_H__

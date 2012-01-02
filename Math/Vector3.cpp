@@ -1,7 +1,7 @@
 #include "Vector3.h"
 #include "math.h"
 
-namespace Junios
+namespace Sabzil
 {
 	Vector3::Vector3(const float* src)
 	{
