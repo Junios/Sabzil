@@ -124,9 +124,20 @@ namespace Sabzil
 		return ( (x != _new.x) || (y != _new.y) || (z != _new.z) ) ? true : false;
 	}
 
+	// unary operator
+	Vector3 Vector3::operator - () const
+	{
+		return Vector3(-x, -y, -z);
+	}
+
 	float Vector3::Length() const
 	{
 		return sqrtf( x * x + y * y + z * z );
+	}
+
+	float Vector3::LengthSquared() const
+	{
+		return ( x * x + y * y + z * z );
 	}
 
 	Vector3 Vector3::Normalize()
@@ -173,6 +184,12 @@ namespace Sabzil
 
 	float Distance(const Vector3 &lhs, const Vector3 &rhs)
 	{
-		return sqrtf( (lhs.x-rhs.x) * (lhs.x-rhs.x) + (lhs.y-rhs.y)*(lhs.y-rhs.y) + (lhs.z-rhs.z)*(lhs.z-rhs.z) ) ;
+		return sqrtf( (lhs.x-rhs.x) * (lhs.x-rhs.x) + (lhs.y-rhs.y)*(lhs.y-rhs.y) + (lhs.z-rhs.z)*(lhs.z-rhs.z) );
 	}
+
+	float DistanceSquared(const Vector3 &lhs, const Vector3 &rhs)
+	{
+		return (lhs.x-rhs.x) * (lhs.x-rhs.x) + (lhs.y-rhs.y)*(lhs.y-rhs.y) + (lhs.z-rhs.z)*(lhs.z-rhs.z);
+	}
+
 }

@@ -194,7 +194,7 @@ namespace Sabzil
 		return (*this);
 	}
 
-	void Vector4::Unit()
+	void Vector4::Identity()
 	{
 		this->x = this->y = this->z = this->w = 1.0f;
 	}
